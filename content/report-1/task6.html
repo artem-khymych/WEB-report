@@ -1,0 +1,245 @@
+<div>
+    <meta charset="UTF-8">
+    <h1>Завдання самостійної роботи</h1>
+    <h2>HTML Елементи</h2>
+    <hr>
+    <p>HTML елементи використовуються для створення структури та змісту веб-сторінки.</p>
+
+    <h2>HTML Атрибути</h2>
+    <hr>
+    <p>Атрибути додають додаткову інформацію до HTML елементів.</p>
+
+    <h2>HTML Параграфи</h2>
+    <hr>
+    <p>Це приклад використання параграфу: <p>Цей текст є параграфом.</p></p>
+
+    <h2>HTML Посилання</h2>
+    <hr>
+    <p>Це приклад посилання: <a href="https://www.example.com">Посилання на приклад</a></p>
+
+    <h2>HTML Посилання - Створення закладок</h2>
+    <hr>
+    <p>Це посилання, яке веде на іншу частину документу: <a href="#section2">Перехід до розділу 2</a></p>
+
+    <h2>HTML Зображення</h2>
+    <hr>
+    <p>Це приклад використання зображення: <img src="https://t3.ftcdn.net/jpg/00/92/53/56/240_F_92535664_IvFsQeHjBzfE6sD4VHdO8u5OHUSc6yHF.jpg" alt="Зображення"></p>
+
+    <h2>HTML Карти зображень</h2>
+    <hr>
+    <p>Карта зображень - це розміщення декількох посилань на зображенні.
+        <map name="workmap">
+            <area shape="rect" coords="54,44,400,350" alt="Computer" href="computer.html">
+            <area shape="rect" coords="410,172,450,250" alt="Phone" href="phone.html">
+        </map>
+        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?cs=srgb&dl=pexels-designecologist-1779487.jpg&fm=jpg" width="500" alt="Робоче місце" usemap="#workmap">
+    </p>
+
+    <h2>HTML Фонові зображення</h2>
+    <hr>
+    <p style="background-image: url('https://t3.ftcdn.net/jpg/00/92/53/56/240_F_92535664_IvFsQeHjBzfE6sD4VHdO8u5OHUSc6yHF.jpg');">Цей текст має фонове зображення.</p>
+
+    <h2>HTML Favicon / Фавікон</h2>
+    <hr>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <h2>HTML Таблиці</h2>
+    <hr>
+    <table>
+        <thead>
+        <tr>
+            <th>Заголовок колонки 1</th>
+            <th>Заголовок колонки 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Дані 1</td>
+            <td>Дані 2</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>HTML Межі таблиці</h2>
+    <hr>
+    <table border="10">
+        <tr>
+            <td>Ячейка 1</td>
+            <td>Ячейка 2</td>
+        </tr>
+    </table>
+
+    <h2>HTML Розмір таблиці</h2>
+    <hr>
+    <table width="400" height="200" border="1">
+        <tr>
+            <td>Ячейка 1</td>
+            <td>Ячейка 2</td>
+        </tr>
+    </table>
+
+    <h2>HTML Заголовки таблиць</h2>
+    <hr>
+    <table>
+        <caption>Це заголовок таблиці</caption>
+        <tr>
+            <th>Заголовок колонки 1</th>
+            <th>Заголовок колонки 2</th>
+        </tr>
+        <tr>
+            <td>Дані 1</td>
+            <td>Дані 2</td>
+        </tr>
+    </table>
+
+    <h2>HTML Таблиці. Padding & Spacing</h2>
+    <hr>
+    <table cellpadding="10" cellspacing="10">
+        <tr>
+            <td>Ячейка 1</td>
+            <td>Ячейка 2</td>
+        </tr>
+    </table>
+
+    <h2>HTML Таблиці. Colspan & Rowspan</h2>
+    <hr>
+    <table border="1">
+        <tr>
+            <td colspan="2">Злиття ячейок</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Розтягнення</td>
+            <td>Ячейка 2</td>
+        </tr>
+        <tr>
+            <td>Ячейка 3</td>
+        </tr>
+    </table>
+
+    <h2>HTML Стилізація таблиць</h2>
+    <hr>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>Заголовок колонки 1</th>
+            <th>Заголовок колонки 2</th>
+        </tr>
+        <tr>
+            <td>Дані 1</td>
+            <td>Дані 2</td>
+        </tr>
+    </table>
+
+    <h2>HTML Група стовпців таблиці</h2>
+    <hr>
+    <table>
+        <colgroup>
+            <col span="2" style="background-color:red">
+            <col style="background-color:yellow">
+        </colgroup>
+        <tr>
+            <th>Заголовок колонки 1</th>
+            <th>Заголовок колонки 2</th>
+            <th>Заголовок колонки 3</th>
+        </tr>
+        <tr>
+            <td>Дані 1</td>
+            <td>Дані 2</td>
+            <td>Дані 3</td>
+        </tr>
+    </table>
+
+    <h2>HTML Списки</h2>
+    <hr>
+    <h3>Невпорядковані списки</h3>
+    <ul>
+        <li>Пункт 1</li>
+        <li>Пункт 2</li>
+    </ul>
+    <h3>Впорядковані списки</h3>
+    <ol>
+        <li>Пункт 1</li>
+        <li>Пункт 2</li>
+    </ol>
+
+    <h3>HTML Інші списки</h3>
+    <dl>
+        <dt>Термін 1</dt>
+        <dd>Визначення 1</dd>
+        <dt>Термін 2</dt>
+        <dd>Визначення 2</dd>
+    </dl>
+
+    <h2>HTML Форми</h2>
+    <hr>
+    <form action="/submit-form" method="post">
+        <label for="username">Ім'я користувача:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Відправити">
+    </form>
+
+    <h2>HTML Елементи форми</h2>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>Легенда</legend>
+            <label for="input">Текстове поле:</label>
+            <input type="text" id="input" name="input"><br><br>
+            <label for="checkbox">Чекбокс:</label>
+            <input type="checkbox" id="checkbox" name="checkbox" value="checkbox"><br><br>
+            <label for="radio">Радіокнопка:</label>
+            <input type="radio" id="radio" name="radio" value="radio"><br><br>
+            <label for="select">Випадаючий список:</label>
+            <select id="select" name="select">
+                <option value="option1">Опція 1</option>
+                <option value="option2">Опція 2</option>
+            </select><br><br>
+            <label for="textarea">Текстова область:</label><br>
+            <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Відправити">
+        </fieldset>
+    </form>
+
+    <h2>HTML Типи вводу</h2>
+    <hr>
+    <form>
+        <label for="text">Текстове поле:</label>
+        <input type="text" id="text" name="text"><br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="number">Число:</label>
+        <input type="number" id="number" name="number"><br><br>
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date"><br><br>
+        <label for="file">Файл:</label>
+        <input type="file" id="file" name="file"><br><br>
+        <input type="submit" value="Відправити">
+    </form>
+
+    <h2>HTML Атрибути вводу</h2>
+    <hr>
+    <form>
+        <label for="text">Текстове поле зі значенням за замовчуванням:</label>
+        <input type="text" id="text" name="text" value="Значення за замовчуванням"><br><br>
+        <label for="text">Текстове поле, що не може бути змінене:</label>
+        <input type="text" id="text" name="text" value="Незмінне значення" readonly><br><br>
+        <label for="text">Текстове поле, що обов'язкове для заповнення:</label>
+        <input type="text" id="text" name="text" required><br><br>
+        <label for="text">Текстове поле з мінімальним та максимальним значенням:</label>
+        <input type="text" id="text" name="text" minlength="2" maxlength="5"><br><br>
+        <input type="submit" value="Відправити">
+    </form>
+
+</div>
