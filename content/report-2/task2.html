@@ -1,0 +1,79 @@
+<div>
+    <p>
+    Існують кілька способів підключення стилів CSS до HTML-сторінки, а саме:
+        <ol>
+            <li>
+                <p>Вбудований стиль: Використовується тег &ltstyle&gt для вказання CSS-стилів прямо в HTML-файлі.
+            Приклад:
+                </p>
+
+                <pre>
+                    <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Приклад вбудованого стилю&lt;/title&gt;
+                            &lt;style&gt;
+                                body {
+                                    font-family: Arial, sans-serif;
+                                }
+                                h1 {
+                                    color: blue;
+                                }
+                            &lt;/style&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+                            &lt;p&gt;Це приклад вбудованого стилю.&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </li>
+
+            <li>
+                <p>Зовнішній файл: Створення окремого CSS-файлу і підключення його до HTML-сторінки за допомогою тегу &ltlink&gt.
+                    Приклад:
+                </p>
+                <pre>
+                    <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Приклад зовнішнього CSS&lt;/title&gt;
+                            &lt;link rel="stylesheet" href="styles.css"&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+                            &lt;p&gt;Це приклад зовнішнього CSS.&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </li>
+
+            <li>
+                <p>Inline-стиль: Використовується атрибут style для вказання CSS-стилів безпосередньо в тегах HTML.
+                    Приклад:
+                </p>
+                <pre>
+                    <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Приклад inline-стилю&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1 style="color: blue;"&gt;Привіт, світ!&lt;/h1&gt;
+                            &lt;p style="font-family: Arial, sans-serif;"&gt;Це приклад inline-стилю.&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </li>
+        </ol>
+    </p>
+</div>
+
+
+

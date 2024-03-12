@@ -1,0 +1,208 @@
+<div>
+    <pre>
+        <style>
+            /* Зміна шрифту для всього тексту */
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            /* Зміна розміру шрифту та кольору для заголовків */
+            h1 {
+                font-size: 24px;
+                color: #333;
+            }
+
+            /* Вирівнювання тексту по центру */
+            .centered-text {
+                text-align: center;
+            }
+
+            /* Зміна кольору тексту */
+            .blue-text {
+                color: blue;
+            }
+
+            /* Створення таблиці з допомогою flexbox */
+            .flex-table {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #ccc;
+            }
+
+            /* Стилі для рядків таблиці */
+            .flex-row {
+                display: flex;
+            }
+
+            /* Стилі для комірок таблиці */
+            .flex-cell {
+                flex: 1;
+                padding: 5px;
+                border-right: 1px solid #ccc;
+            }
+
+            /* Остання комірка не має правої границі */
+            .flex-cell:last-child {
+                border-right: none;
+            }
+
+            /* Зміна фонового кольору сторінки */
+            body {
+                background-color: #f0f0f0;
+            }
+
+            /* Додання контуру елементам */
+            .outlined-box {
+                border: 1px solid #ccc;
+            }
+
+            /* Видалення маркерів списків */
+            .no-bullets {
+                list-style-type: none;
+            }
+
+            /* Псевдокласи */
+            a:hover {
+                color: red;
+            }
+
+            /* Градієнтний фон */
+            .gradient-bg {
+                background: linear-gradient(to right, #ff7e5f, #feb47b);
+            }
+
+            /* Анімація */
+            @keyframes example {
+                0%   {opacity: 0;}
+                100% {opacity: 1;}
+            }
+
+            .animated-element {
+                animation: example 2s infinite alternate;
+            }
+        </style>
+
+        <h1>Приклади використання CSS</h1>
+        <p class="centered-text blue-text">Цей текст вирівняний по центру та має синій колір.</p>
+        <div class="flex-table outlined-box">
+            <div class="flex-row">
+                <div class="flex-cell">Комірка 1</div>
+                <div class="flex-cell">Комірка 2</div>
+            </div>
+            <div class="flex-row">
+                <div class="flex-cell">Комірка 3</div>
+                <div class="flex-cell">Комірка 4</div>
+            </div>
+        </div>
+        <ul class="no-bullets">
+            <li>Перший пункт списку</li>
+            <li>Другий пункт списку</li>
+            <li>Третій пункт списку</li>
+        </ul>
+        <p class="gradient-bg animated-element">Цей текст має градієнтний фон та анімацію.</p>
+    </pre>
+    <pre>
+       <code>
+            &ltstyle>
+            /* Зміна шрифту для всього тексту */
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            /* Зміна розміру шрифту та кольору для заголовків */
+            h1 {
+                font-size: 24px;
+                color: #333;
+            }
+
+            /* Вирівнювання тексту по центру */
+            .centered-text {
+                text-align: center;
+            }
+
+            /* Зміна кольору тексту */
+            .blue-text {
+                color: blue;
+            }
+
+            /* Створення таблиці з допомогою flexbox */
+            .flex-table {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #ccc;
+            }
+
+            /* Стилі для рядків таблиці */
+            .flex-row {
+                display: flex;
+            }
+
+            /* Стилі для комірок таблиці */
+            .flex-cell {
+                flex: 1;
+                padding: 5px;
+                border-right: 1px solid #ccc;
+            }
+
+            /* Остання комірка не має правої границі */
+            .flex-cell:last-child {
+                border-right: none;
+            }
+
+            /* Зміна фонового кольору сторінки */
+            body {
+                background-color: #f0f0f0;
+            }
+
+            /* Додання контуру елементам */
+            .outlined-box {
+                border: 1px solid #ccc;
+            }
+
+            /* Видалення маркерів списків */
+            .no-bullets {
+                list-style-type: none;
+            }
+
+            /* Псевдокласи */
+            a:hover {
+                color: red;
+            }
+
+            /* Градієнтний фон */
+            .gradient-bg {
+                background: linear-gradient(to right, #ff7e5f, #feb47b);
+            }
+
+            /* Анімація */
+            @keyframes example {
+                0%   {opacity: 0;}
+                100% {opacity: 1;}
+            }
+
+            .animated-element {
+                animation: example 2s infinite alternate;
+            }
+        &lt/style&gt
+
+        &lth1&gtПриклади використання CSS&l/h1&gt
+           &ltp class="centered-text blue-text">Цей текст вирівняний по центру та має синій колір.&lt/p&gt
+        &ltdiv class="flex-table outlined-box"&gt
+           &ltdiv class="flex-row">
+                &ltdiv class="flex-cell">Комірка 1&lt/div&gt
+                &ltdiv class="flex-cell">Комірка 2&lt/div&gt
+           &lt/div&gt
+           &ltdiv class="flex-row"&gt
+                &ltdiv class="flex-cell">Комірка 3&lt/div&gt
+                &ltdiv class="flex-cell">Комірка 4&lt/div&gt
+           &lt/div&gt
+       &lt/div&gt
+            &ltul class="no-bullets"&gt
+                &ltli>Перший пункт списку&lt/li&gt
+                &ltli>Другий пункт списку&lt/li&gt
+                &ltli>Третій пункт списку&lt/li&gt
+            &lt/ul&gt
+            &ltp class="gradient-bg animated-element">Цей текст має градієнтний фон та анімацію.&lt/p&gt
+       </code>
+    </pre>
+</div>

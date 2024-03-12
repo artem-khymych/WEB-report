@@ -65,9 +65,11 @@ img:hover{
     justify-content: space-between;
 
 }
+
 .button-container{
     width: 100%;
 }
+
 main{
     display: flex;
     flex-direction: row;
