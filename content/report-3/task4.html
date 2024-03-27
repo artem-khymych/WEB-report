@@ -1,0 +1,102 @@
+<div>
+    <h2>Вигляд сторінки</h2>
+    <img src="../../media/report-3/table_rel.png" alt="" width="100%">
+    <h2>Код сторінки</h2>
+    <pre>
+        <code>
+            &lt!DOCTYPE html&gt
+            &lthtml lang="en"&gt
+            &lthead&gt
+                &ltmeta charset="UTF-8"&gt
+                &lttitle&gtTitle&lt/title&gt
+                &ltstyle&gt
+                    * {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    #block1, #block5 {
+                        background-color: yellow;
+                        height: 100px;
+                    }
+                    #block2, #block4 {
+                        background-color: darkblue;
+                    }
+                    #block3 {
+                        background-color: gray;
+
+                    }
+                    #block6 {
+                        background-color: red;
+                        min-height: 50px
+                    }
+
+                    #inner-table{
+                        border: solid azure;
+                        border-collapse: separate;
+                        border-spacing: 10px;
+                        border-bottom: 0;
+                    }
+
+                  #block1 p div{
+                      margin-top: 10px;
+                  }
+                  #block4, #block3{
+                      text-align: center;
+                  }
+                &lt/style&gt
+            &lt/head&gt
+            &ltbody&gt
+            &lttable&gt
+                &lttr&gt
+                    &lttd id="block1" colspan="2" align="right"&gt
+                        &ltp style="float: right; margin-right: 20px;"&gt1&lt/p&gt
+                        &ltdiv style="min-width: 30%; min-height: 40px; background-color: azure; margin-left: 1%;float: left; "&gt&lt/div&gt
+                    &lt/td&gt
+                &lt/tr&gt
+                &lttr&gt
+                    &lttd id="block2" rowspan="2" width="20%" align="center"&gt
+                        &ltp style="margin-top: 10px"&gt2&lt/p&gt
+                    &lt/td&gt
+                    &lttd id="wrapper-3-4-6"&gt
+                        &lttable width="100%" id="inner-table" &gt
+                            &lttr&gt
+                                &lttd id="block6" colspan="2" height="50px"&gt
+                                    &lt/br&gt
+                                &lt/td&gt
+                            &lt/tr&gt
+                            &lttr &gt
+                                &lttd id="block3"  width="49%"  &gt
+                                    &ltdiv  style="min-height: 500px; margin-top: 10px"&gt
+                                        &ltp style="margin-top: 100px"&gt3&lt/p&gt
+                                        &ltdiv style="min-height: 40px; background-color: red; margin-top: 450px"&gt&lt/div&gt
+                                    &lt/div&gt
+                                &lt/td&gt
+                                &lttd id="block4" width="49%"&gt
+                                    &ltdiv style="min-height: 500px; margin-top: 10px"&gt
+                                        &ltp style="margin-top: 100px"&gt4&lt/p&gt
+                                    &lt/div&gt
+
+                                &lt/td&gt
+                            &lt/tr&gt
+                        &lt/table&gt
+                    &lt/td&gt
+                &lt/tr&gt
+                &lttr&gt
+
+                &lt/tr&gt
+                &lttr&gt
+                    &lttd id="block5" colspan="2" align="left"&gt
+                        &ltp style="margin-left: 20px; margin-top: 40px"&gt5&lt/p&gt
+                    &lt/td&gt
+                &lt/tr&gt
+            &lt/table&gt
+            &lt/body&gt
+            &lt/html&gt
+
+        </code>
+    </pre>
+</div>

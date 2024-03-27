@@ -50,14 +50,13 @@ nav {
     display: flex;
     flex-direction: column;
 }
-img{
+#photo{
     opacity: 0;
 }
-img:hover{
+#photo:hover{
     opacity: 1;
 }
 .sidebar{
-    display: flex;
     flex-direction: column;
     width: 20%;
     background-color: grey;

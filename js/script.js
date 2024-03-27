@@ -1,7 +1,7 @@
 let lab_num = 'report-1';
 
 document.addEventListener('click', function(event) {
-    if (event.target.id.slice(0,-1) === 'block') {
+    if (event.target.id.slice(0,5) === 'block') {
         event.preventDefault();
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -9,7 +9,8 @@ document.addEventListener('click', function(event) {
                 document.getElementById('main-content').innerHTML = xhr.responseText;
             }
         };
-        xhr.open('GET', `content/${lab_num}/task${event.target.id[5]}.html`, true);
+        console.log(event.target.id.replace("block",''))
+        xhr.open('GET', `content/${lab_num}/task${event.target.id.replace("block",'')}.html`, true);
         xhr.send();
     }
 });
