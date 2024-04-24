@@ -1,0 +1,42 @@
+<div>
+    <h3>Вивід консолі</h3>
+    <img src="content/report-5/report-5/task.1.6.png" alt="" width="100%">
+    <h2>Вміст файлу стилів</h2>
+    <pre>
+        <code>
+            /*           TASK 6              */
+            console.log("TASK 6")
+            const medicines = [
+                { name: "Noshpa", price: 170 },
+                { name: "Analgin", price: 55 },
+                { name: "Quanil", price: 310 },
+                { name: "Alphacholine", price: 390 },
+            ];
+
+            const applyDiscount = (medicines) => {
+                const discountedMedicines = medicines.map(medicine => {
+                    if (medicine.price > 300) {
+                        return {
+                            id: Math.random().toString(36).substr(2, 9), // Генеруємо випадковий id
+                            name: medicine.name,
+                            price: medicine.price * 0.7, // Знижка 30%
+                        };
+                    } else {
+                        return {
+                            id: Math.random().toString(36).substr(2, 9), // Генеруємо випадковий id
+                            name: medicine.name,
+                            price: medicine.price,
+                        };
+                    }
+                });
+
+                return discountedMedicines;
+            };
+
+            const discountedMedicines = applyDiscount(medicines);
+            console.log(discountedMedicines);
+
+
+        </code>
+    </pre>
+</div>

@@ -1,0 +1,47 @@
+<div>
+    <h3>Вивід консолі</h3>
+    <img src="content/report-5/report-5/task.1.2.png" alt="" width="100%">
+    <h2>Вміст файлу стилів</h2>
+    <pre>
+        <code>
+            /*                      TASK 2                 */
+            console.log("TASK 2")
+            function getProductDetails(productId, successCallback, errorCallback) {
+                // Припустимо, що ми маємо масив об'єктів товарів
+                const products = [
+                    { id: 1, name: 'Товар 1', price: 100 },
+                    { id: 2, name: 'Товар 2', price: 200 },
+                    { id: 3, name: 'Товар 3', price: 300 }
+                ];
+
+                // Пошук товару за ідентифікатором
+                const product = products.find(item => item.id === productId);
+
+                // Перевірка, чи знайдено товар
+                if (product) {
+                    // Якщо товар знайдено, передаємо його у successCallback
+                    successCallback(product);
+                } else {
+                    // Якщо товар не знайдено, викликаємо errorCallback з повідомленням про помилку
+                    errorCallback('Товар не знайдено');
+                }
+            }
+
+            // Приклад використання функції getProductDetails
+            const productId = 2; // Ідентифікатор товару для пошуку
+
+            // Колбек-функція для успішного виконання
+            const successCallback = (product) => {
+                console.log('Деталі товару:', product);
+            };
+
+            // Колбек-функція для випадку помилки
+            const errorCallback = (errorMessage) => {
+                console.error('Помилка:', errorMessage);
+            };
+
+            // Виклик функції getProductDetails з передачею ідентифікатора товару та колбек-функцій
+            getProductDetails(productId, successCallback, errorCallback);
+        </code>
+    </pre>
+</div>

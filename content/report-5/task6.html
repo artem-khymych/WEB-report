@@ -1,0 +1,33 @@
+<div>
+    <h3>Вивід консолі</h3>
+    <img src="content/report-5/report-5/task.1.4.png" alt="" width="100%">
+    <h2>Вміст файлу стилів</h2>
+    <pre>
+        <code>
+
+
+                /*                      TASK 4                 */
+                const concerts = {
+                    Київ: new Date("2020-04-01"),
+                    Умань: new Date("2025-07-02"),
+                    Вінниця: new Date("2020-04-21"),
+                    Одеса: new Date("2025-03-15"),
+                    Хмельницький: new Date("2020-04-18"),
+                    Харків: new Date("2025-07-10"),
+                };
+
+                // Отримуємо масив імен міст з об'єкта concerts
+                const cityNames = Object.keys(concerts);
+
+                // Видаляємо міста, в яких концерт вже пройшов
+                const upcomingCities = cityNames.filter(city => concerts[city] > new Date());
+
+                // Сортуємо міста у хронологічному порядку
+                const sortedCities = upcomingCities.sort((cityA, cityB) => concerts[cityA] - concerts[cityB]);
+
+                // Виводимо результат у консоль
+                console.log(sortedCities);
+
+        </code>
+    </pre>
+</div>

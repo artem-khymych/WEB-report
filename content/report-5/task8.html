@@ -1,0 +1,43 @@
+<div>
+    <h3>Вивід консолі</h3>
+    <img src="content/report-5/report-5/task.1.8.png" alt="" width="100%">
+    <h2>Вміст файлу стилів</h2>
+    <pre>
+        <code>
+
+            /*           TASK 8              */
+            console.log("TASK 8")
+            function Storage(initialItems) {
+                this.items = initialItems;
+
+                this.getItems = function() {
+                    return this.items;
+                };
+
+                this.addItems = function(item) {
+                    this.items.push(item);
+                };
+
+                this.removeItem = function(item) {
+                    const index = this.items.indexOf(item);
+                    if (index !== -1) {
+                        this.items.splice(index, 1);
+                    }
+                };
+            }
+
+            const arr = ["apple", "banana", "mango"];
+            const storage = new Storage(arr);
+
+            console.log(storage.getItems()); // ["apple", "banana", "mango"]
+
+            storage.addItems("orange");
+            console.log(storage.getItems()); // ["apple", "banana", "mango", "orange"]
+
+            storage.removeItem("banana");
+            console.log(storage.getItems()); // ["apple", "mango", "orange"]
+
+
+        </code>
+    </pre>
+</div>
