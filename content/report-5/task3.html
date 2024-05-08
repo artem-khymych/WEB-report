@@ -4,26 +4,22 @@
     <h2>Вміст файлу стилів</h2>
     <pre>
         <code>
-            document.addEventListener("DOMContentLoaded", function() {
-                const menuItems = document.querySelectorAll(".horizontal-menu li");
+                // Статичний масив назв пунктів меню
+                const menuItems = ['Головна', 'Пункт 1.1', 'Пункт 1.2', 'Пункт 2.1','Пункт 2.2'];
 
-                menuItems.forEach(item => {
-                    item.addEventListener("click", function(e) {
-                        const submenu = this.querySelector("ul");
-
-                        if (submenu) {
-                            e.preventDefault();
-                            submenu.classList.toggle("show");
-                        } else {
-                            const page = this.querySelector("a").getAttribute("href");
-                            if (page) {
-                                e.preventDefault();
-                                window.location.href = page;
-                            }
-                        }
+                // Додаємо обробник подій для посилань з класом "menu-item"
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    item.addEventListener('click', function(event) {
+                        event.preventDefault(); // Забороняємо стандартну дію посилань
+                        const index = parseInt(this.getAttribute('data-index'), 10); // Отримуємо індекс пункту меню
+                        changeMenuTitle(menuItems[index]); // Змінюємо заголовок меню
                     });
                 });
-            });
+
+                // Функція для зміни заголовка меню
+                function changeMenuTitle(title) {
+                    document.getElementById("text").innerText= title;
+                }
 
         </code>
     </pre>
