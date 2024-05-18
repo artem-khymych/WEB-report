@@ -1,0 +1,29 @@
+<div>
+    <p>
+        У звітному HTML-документі створити html-розміту, яка складається з наступних елементів : текст, кнопка, два інпута (поля введення ).
+        Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
+        Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
+        У звітному HTML-документі  відобразити скрін програмного коду.
+
+    </p>
+    <h2>TASK 2</h2><br>
+
+    <label for="input1">Input 1:</label>
+    <input type="text" id="input1" name="input1"><br><br>
+
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2" name="input2"><br><br>
+
+    <button onclick="swapContent()">SWAP ME</button><br><br>
+    <h2>Вміст файлу скриптів</h2>
+    <pre>
+        <code>
+           function swapContent() {
+                var input1 = document.getElementById('input1').value;
+                var input2 = document.getElementById('input2').value;
+                document.getElementById('input1').value = input2;
+                document.getElementById('input2').value = input1;
+             }
+        </code>
+    </pre>
+</div>

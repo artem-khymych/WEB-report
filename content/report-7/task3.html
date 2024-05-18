@@ -1,0 +1,50 @@
+<div>
+    <img src="content/report-7/report-7/img_2.png" alt="gallery" width="100%">
+    <img src="content/report-7/report-7/img_3.png" alt="modal" width="100%">
+    <h2>Вміст файлу cкриптів</h2>
+    <pre>
+        <code>
+            document.addEventListener('DOMContentLoaded', () => {
+                const formData = {
+                    email: "",
+                    message: ""
+                };
+
+                const form = document.querySelector('.feedback-form');
+                const emailInput = form.querySelector('input[name="email"]');
+                const messageInput = form.querySelector('textarea[name="message"]');
+                const localStorageKey = "feedback-form-state";
+
+                const savedFormData = localStorage.getItem(localStorageKey);
+                if (savedFormData) {
+                    const parsedFormData = JSON.parse(savedFormData);
+                    emailInput.value = parsedFormData.email;
+                    messageInput.value = parsedFormData.message;
+                }
+
+                form.addEventListener('input', e => {
+                    const { name, value } = e.target;
+                    formData[name] = value;
+                    localStorage.setItem(localStorageKey, JSON.stringify(formData));
+                });
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    if (formData.email.trim() === "" || formData.message.trim() === "") {
+                        alert("Fill please all fields");
+                        return;
+                    }
+
+                    console.log(formData); // Виведення об'єкта formData у консоль
+
+                    localStorage.removeItem(localStorageKey);
+                    formData.email = "";
+                    formData.message = "";
+                    form.reset();
+                });
+            });
+
+        </code>
+    </pre>
+</div>

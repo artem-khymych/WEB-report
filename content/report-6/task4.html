@@ -1,0 +1,32 @@
+<div>
+    <p>
+        У звітному HTML-документі створити html-розміту, яка складається з наступних елементів : текст, маркирований список.
+        Натиснувши кнопку "Подвоїти", збільшити значення
+        у кожному елементі списку у 2 рази. Повторний натиск на  кнопці "Подвоїти", також збільшить значення у кожному елементі списку у 2 рази
+        У звітному HTML-документі  відобразити скрін програмного коду
+    </p>
+    <div id="task6">
+        <h2>TASK 6</h2>
+        <p>Маркований список:</p>
+        <ul id="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+
+        <button onclick="duplicateItems()">Подвоїти</button>
+    </div>
+    <h2>Вміст файлу cкриптів</h2>
+    <pre>
+        <code>
+            function duplicateItems() {
+                var list = document.getElementById('list').getElementsByTagName('li');
+                for (var i = 0; i < list.length; i++) {
+                    var currentValue = parseInt(list[i].innerText);
+                    var newValue = currentValue * 2;
+                    list[i].innerText = newValue;
+                }
+            }
+        </code>
+    </pre>
+</div>

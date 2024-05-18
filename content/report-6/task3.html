@@ -1,0 +1,36 @@
+<div>
+    <P>
+        У звітному HTML-документі створити html-розміту, яка складається з наступних елементів : текст, блок (div), дві кнопки
+        Кнопка "Зменшити" робить квадрат менше на 15 пікселів.
+        Повторний натиск на кнопці Зменшити"    робить квадрат ще менше на 15 пікселів.
+        "Збільшити" – робить квадрат більше на 15 пікселів. Повторний натиск на кнопці "Зменшити"    робить квадрат ще більше на 15 пікселів.
+        У звітному HTML-документі  відобразити скрін програмного коду
+    </P>
+
+    <div id="task4">
+        <h2>TASK 4</h2> <br>
+        <div id="square" style="width: 150px; height: 150px; background-color: blue; margin-bottom: 10px;"></div>
+        <button onclick="decreaseSize()">Зменшити</button>
+        <button onclick="increaseSize()">Збільшити</button>
+    </div>
+
+    <h2>Вміст файлу cкриптів</h2>
+    <pre>
+        <code>
+            var squareSize = 150;
+            function decreaseSize() {
+                if (squareSize > 15) {
+                    squareSize -= 15;
+                    document.getElementById('square').style.width = squareSize + 'px';
+                    document.getElementById('square').style.height = squareSize + 'px';
+                }
+            }
+
+            function increaseSize() {
+                squareSize += 15;
+                document.getElementById('square').style.width = squareSize + 'px';
+                document.getElementById('square').style.height = squareSize + 'px';
+            }
+        </code>
+    </pre>
+</div>

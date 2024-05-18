@@ -1,0 +1,69 @@
+<div>
+    <p>
+        НTML містить список категорій ul#categories.
+    Напиши скрипт, який:
+    1.	Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item.
+
+    2.	Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку елемента (тегу ) і кількість елементів в категорії (усіх , вкладених в нього).
+    Для виконання цього завдання потрібно використати метод forEach() і властивості навігації по DOM.
+    </p>
+
+    <div id="task7">
+        <h2>TASK 7</h2>
+        <ul id="categories">
+            <li class="item">
+                <h2>Animals</h2>
+                <ul>
+                    <li>Cat</li>
+                    <li>Hamster</li>
+                    <li>Horse</li>
+                    <li>Parrot</li>
+                </ul>
+            </li>
+            <li class="item">
+                <h2>Products</h2>
+                <ul>
+                    <li>Bread</li>
+                    <li>Prasley</li>
+                    <li>Cheese</li>
+                </ul>
+            </li>
+            <li class="item">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </li>
+        </ul>
+        <button onclick="sumCats()"> Порахувати категорії</button>
+    </div>
+
+    <h2>Вміст файлу скриптів</h2>
+    <pre>
+        <code>
+         function sumCats(){
+                const categoriesList = document.querySelectorAll('#categories .item');
+
+
+                const categoriesCount = categoriesList.length;
+                console.log(`Кількість категорій: ${categoriesCount}`);
+
+
+                categoriesList.forEach(category => {
+
+                    const categoryTitle = category.querySelector('h2').textContent;
+
+                    const categoryItems = category.querySelectorAll('ul li');
+                    // Підрахунок кількості елементів у категорії
+                    const itemsCount = categoryItems.length;
+                    // Виведення результату у консоль
+                    console.log(`Категорія: ${categoryTitle}, Кількість елементів: ${itemsCount}`);
+                });
+            }
+        </code>
+    </pre>
+</div>

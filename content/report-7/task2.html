@@ -1,0 +1,87 @@
+<div>
+    <p>
+    </p>
+    <img src="content/report-7/report-7/img.png" alt="gallery" width="100%">
+    <img src="content/report-7/report-7/img_1.png" alt="modal" width="100%">
+
+    <h2>Вміст файлу скриптів</h2>
+    <pre>
+        <code>
+                    const images = [
+            {
+                preview: 'https://via.placeholder.com/400',
+                original: 'https://via.placeholder.com/600',
+                description: 'Текстовий опис зображення 1',
+            },
+            {
+                preview: 'https://via.placeholder.com/150',
+                original: 'https://via.placeholder.com/600',
+                description: 'Текстовий опис зображення 2',
+            },
+            {
+                preview: 'https://via.placeholder.com/100',
+                original: 'https://via.placeholder.com/600',
+                description: 'Текстовий опис зображення 1',
+            },
+            {
+                preview: 'https://via.placeholder.com/200',
+                original: 'https://via.placeholder.com/600',
+                description: 'Текстовий опис зображення 2',
+            },
+            {
+                preview: 'https://via.placeholder.com/150',
+                original: 'https://via.placeholder.com/600',
+                description: 'Текстовий опис зображення 2',
+            },
+            {
+                preview: 'https://via.placeholder.com/100',
+                original: 'https://via.placeholder.com/600',
+                description: 'Текстовий опис зображення 1',
+            },
+            {
+                preview: 'https://via.placeholder.com/400',
+                original: 'https://via.placeholder.com/600',
+                description: 'Текстовий опис зображення 2',
+            },
+        ];
+
+        const gallery = document.querySelector('.gallery');
+
+        const imagesMarkup = images.map(({ preview, original, description }) => `
+            <li>
+                <a href="${original}">
+                    <img src="${preview}" alt="${description}">
+                </a>
+            </li>
+        `).join('');
+
+        gallery.insertAdjacentHTML('beforeend', imagesMarkup);
+
+        /*
+        gallery.addEventListener('click', e => {
+            e.preventDefault();
+            if (e.target.tagName === 'IMG') {
+                const originalImage = e.target.parentNode.href;
+                console.log(originalImage);
+            }
+        });
+        */
+
+        gallery.addEventListener('click', e => {
+            e.preventDefault();
+            if (e.target.tagName === 'IMG') {
+                const originalImage = e.target.parentNode.href;
+                const imageAlt = e.target.alt;
+
+                const lightbox = basicLightbox.create(`
+                    <img src="${originalImage}" alt="${imageAlt}">
+                `);
+
+                lightbox.show();
+            }
+        });
+
+
+        </code>
+    </pre>
+</div>
